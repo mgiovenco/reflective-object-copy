@@ -1,0 +1,8 @@
+        try {
+            // Copy properties
+            NullAwareBeanUtilsBean notNull = createNullAwareBeanUtilsBean();
+            notNull.copyProperties(existingServiceModel, json);
+        } catch (Exception ex) {
+            log.error(errorMessage, ex);
+            throw new RuntimeException(errorMessage, ex);
+        }
